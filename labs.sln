@@ -15,9 +15,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab_02_oop", "Lab_02_classe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab_06_wpf", "Lab_06_wpf\Lab_06_wpf.csproj", "{24CF22FF-2E5E-4DDC-AB32-DAAC2838660E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab_07_files", "ConsoleApp1\Lab_07_files.csproj", "{E2F028C2-E867-4441-B261-C2EE986BADA6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab_07_files", "Labs_07_files\Lab_07_files.csproj", "{E2F028C2-E867-4441-B261-C2EE986BADA6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labs_08_files", "..\Users\tech-w85a\source\repos\Labs_08_files\Labs_08_files\Labs_08_files.csproj", "{3B0B1194-9539-4BCF-827B-320D470E668B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labs_08_files", "Labs_08_files\Labs_08_files\Labs_08_files.csproj", "{3B0B1194-9539-4BCF-827B-320D470E668B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Random_Person", "Random_Person\Random_Person.csproj", "{DEA22DC2-89A2-4732-9E35-146624B9EF2B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{3B0B1194-9539-4BCF-827B-320D470E668B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B0B1194-9539-4BCF-827B-320D470E668B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B0B1194-9539-4BCF-827B-320D470E668B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEA22DC2-89A2-4732-9E35-146624B9EF2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEA22DC2-89A2-4732-9E35-146624B9EF2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEA22DC2-89A2-4732-9E35-146624B9EF2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEA22DC2-89A2-4732-9E35-146624B9EF2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
