@@ -47,6 +47,7 @@ namespace Lab_104_array_list_queue_stack_dict_01
                 Console.WriteLine(i);
             }
             Console.WriteLine(total);
+            //14 Mins from start to finish
         }
     }
 }
