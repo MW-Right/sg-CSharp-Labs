@@ -70,9 +70,7 @@ namespace Lab_09_XML
 
             //Loading info from an XML file
             Console.WriteLine("\n\n --+== Loading from a file ==+--\n");
-            XmlDocument doc07 = new XmlDocument();
-            doc07.Load("Xml06.xml");
-            Console.WriteLine(XDocument.Parse(doc07.InnerXml));
+            XDocument doc07 = XDocument.Load("Xml06.xml");
         }
     }
 }
