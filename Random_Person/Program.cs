@@ -13,17 +13,17 @@ namespace Random_Person
         {}
         static void Main(string[] args)
         {
-            string[] firstNameArr = new string[] { "Michael", "Maiwand", "Jake", "Desmond", "Adam", "Jdareen", "Seb", "Nadi", "Amira", "Aneisha" };
-            string[] lastNameArr = new string[] { "Wright", "Hussain", "Little", "Nembhard", "Goddard", "Garces", "Rodriguez", "Adem", "Shah", "Mallikaratchy" };
+            string[] firstNameArr = new string[] { "Michael", "Maiwand", "Jake", "Desmond", "Adam", "Jdareen", "Seb", "Nadi", "Amira", "Aneisha", "Tyrone", "Sam", "Luke" };
+            string[] lastNameArr = new string[] { "Wright", "Hussain", "Little", "Nembhard", "Goddard", "Garces", "Rodriguez", "Adem", "Shah", "Mallikaratchy", "Nembhard", "Bowden-Williams", "Dawes" };
             List<object> nameList = new List<object>();
             Random rnd = new Random();
             ThreadStart thStart = new ThreadStart(ThreadStartMethod);
             Thread th = new Thread(thStart);
             th.Start();
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 100; i++)
             {
-                int fnPick = rnd.Next(0, 10);
-                int lnPick = rnd.Next(0, 10);
+                int fnPick = rnd.Next(0, 13);
+                int lnPick = rnd.Next(0, 13);
                 Parent person = new Parent(firstNameArr[fnPick], lastNameArr[lnPick]);
                 nameList.Add(person);
                 Console.WriteLine($"Hello, my name is {person.FirstName} {person.LastName} and I was born on {person.Dob} which means I am {person.Age} years old.");
