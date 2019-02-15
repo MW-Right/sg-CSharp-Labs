@@ -9,19 +9,7 @@
     <Grid>
         <ListBox Name="folderListBox" HorizontalAlignment="Left" Height="193" Margin="64,93,0,0" VerticalAlignment="Top" Width="137" SelectionChanged="FolderList_SelectionChanged"/>
         <TextBlock x:Name="folderListTitle" HorizontalAlignment="Left" Margin="64,54,0,0" TextWrapping="Wrap" Text="Folder List" VerticalAlignment="Top" Height="34" Width="61" FontSize="20"/>
-        <ListBox Name="fileListBox" FontSize="12px" HorizontalAlignment="Left" Height="191" Margin="305,95,0,0" VerticalAlignment="Top" Width="134" SelectionMode="Extended"/>
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <Grid Margin="0,2">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="100" />
-                        </Grid.ColumnDefinitions>
-                        <TextBlock Text="{Binding name}" />
-                        <ProgressBar Grid.Column="1" Minimum="0" Maximum="100" Value="{Binding Completion}" />
-                    </Grid>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
+        <ListBox Name="fileListBox" FontSize="12px" HorizontalAlignment="Left" Height="191" Margin="305,95,0,0" VerticalAlignment="Top" Width="134"/>
         <TextBlock x:Name="fileListTitle" HorizontalAlignment="Left" Margin="305,55,0,0" TextWrapping="Wrap" Text="File List" VerticalAlignment="Top" Height="33" Width="43" FontSize="20"/>
         <TextBox x:Name="fileName" FontSize="15" HorizontalAlignment="Left" Height="42" Margin="66,361,0,0" TextWrapping="Wrap" Text="Input file name" VerticalAlignment="Top" Width="159"/>
         <RichTextBox HorizontalAlignment="Left" Height="206" Margin="305,410,0,0" VerticalAlignment="Top" Width="163">
