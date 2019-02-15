@@ -45,7 +45,7 @@ namespace Lab_107_listFolders01
         {
             DirectoryInfo dSelected = new DirectoryInfo(@ProgramVariables.address);
             DirectoryInfo[] cSelectedFolders = dSelected.GetDirectories();
-            FileInfo[] cSelectedFiles = dSelected.GetFiles();
+            System.IO.FileInfo[] cSelectedFiles = dSelected.GetFiles();
             List<FileInfo> folderList = new List<FileInfo>();
             List<FileInfo> fileList = new List<FileInfo>();
             List<string> listBoxRight = new List<string>();
@@ -57,7 +57,7 @@ namespace Lab_107_listFolders01
             foreach (var i in cSelectedFiles)
             {
                 string name = i.Name.ToString();
-                fileList.Add(name);
+                listBoxRight.Add(name);
             }
             foreach (var i in folderList)
             {
