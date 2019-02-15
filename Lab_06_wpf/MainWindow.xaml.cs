@@ -19,38 +19,31 @@ namespace Lab_06_wpf
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public class ProgramVariables
-    {
-        public static bool gameOn = false;
-        public static string input = "";
-        public static DateTime finish = DateTime.Now.AddSeconds(10);
-    }
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
         }
-
+        public class ProgramVariables
+        {
+            public static DateTime startTime = new DateTime();
+            public static int timeTaken = 0;
+        }
         private void InputBlock_TextChanged(object sender, TextChangedEventArgs e)
         {
-
-            while (ProgramVariables.gameOn == true)
+            string input = "";
+            input = inputBlock.Text;
+            timerBlock.Text = $"{(ProgramVariables.startTime - DateTime.Now).TotalSeconds}";
+            if (inputBlock.Text.Length == 250)
             {
-                ProgramVariables.input = inputBlock.Text;
-                if (DateTime.Compare(ProgramVariables.finish, DateTime.Now) <= 0)
-                {
-                    ProgramVariables.gameOn = false;
-                    break;
-                }
+                inputBlock.AppendText($"You took {ProgramVariables.timeTaken}");
             }
-            inputBlock.Text = "";
-            inputBlock.Text = $"You scored {ProgramVariables.input}, hit start to try again" + ProgramVariables.input.Length;
         }
-
         private void StartButton_Click(object sender, RoutedEventArgs e)
         {
-            ProgramVariables.gameOn = true;
+            ProgramVariables.startTime = DateTime.Now;
+
         }
     }    
 }
