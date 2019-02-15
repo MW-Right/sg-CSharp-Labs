@@ -26,11 +26,13 @@ namespace ConsoleApp4
             Console.WriteLine("Which game would you like to play?");
             Console.WriteLine("Random (r), Ordered (o)");
             gameMode = Convert.ToString(Console.ReadLine());
-            Console.WriteLine("Press enter to continue");
+            Console.WriteLine(" --+== ARE YOU READY? ==+-- ");
+            Console.WriteLine("Press enter to start...");
             Console.ReadLine();
             if (gameMode == "r")
             {
                 TakeKeyInput();
+                score = input.Count;
                 Score();
             }
             else if (gameMode == "o")
