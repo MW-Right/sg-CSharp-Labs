@@ -10,11 +10,20 @@ namespace Lab_116_TryCatchThrow
     {
         static void Main(string[] args)
         {
+            int x = 1;
+            int y = 0;
+
             try
             {
                 try
                 {
+                    int z = x / y;
                     throw new Exception("Phil's Special Exception");
+                }
+                catch(DivideByZeroException e)
+                {
+                    Console.WriteLine("Yeet");
+                    Console.WriteLine(e.Message);
                 }
                 catch
                 {
