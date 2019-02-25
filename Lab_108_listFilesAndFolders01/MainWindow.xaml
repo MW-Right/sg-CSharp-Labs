@@ -9,20 +9,14 @@
     <Grid>
         <ListBox Name="folderListBox" HorizontalAlignment="Left" Height="193" Margin="64,93,0,0" VerticalAlignment="Top" Width="137" SelectionChanged="FolderList_SelectionChanged"/>
         <TextBlock x:Name="folderListTitle" HorizontalAlignment="Left" Margin="64,54,0,0" TextWrapping="Wrap" Text="Folder List" VerticalAlignment="Top" Height="34" Width="61" FontSize="20"/>
-        <ListBox Name="fileListBox" FontSize="12px" HorizontalAlignment="Left" Height="191" Margin="305,95,0,0" VerticalAlignment="Top" Width="134"/>
+        <ListBox Name="fileListBox" FontSize="12px" HorizontalAlignment="Left" Height="191" Margin="305,95,0,0" VerticalAlignment="Top" Width="134" SelectionChanged="FileListBox_SelectionChanged"/>
         <TextBlock x:Name="fileListTitle" HorizontalAlignment="Left" Margin="305,55,0,0" TextWrapping="Wrap" Text="File List" VerticalAlignment="Top" Height="33" Width="43" FontSize="20"/>
-        <TextBox x:Name="fileName" FontSize="15" HorizontalAlignment="Left" Height="42" Margin="66,361,0,0" TextWrapping="Wrap" Text="Input file name" VerticalAlignment="Top" Width="159"/>
-        <RichTextBox HorizontalAlignment="Left" Height="206" Margin="305,410,0,0" VerticalAlignment="Top" Width="163">
-            <FlowDocument>
-                <Paragraph>
-                    <Run Text="Insert text here"/>
-                </Paragraph>
-            </FlowDocument>
-        </RichTextBox>
-        <Button x:Name="saveButton" Content="Save" FontSize="20" HorizontalAlignment="Left" Margin="84,435,0,0" VerticalAlignment="Top" Width="100" Height="28"/>
+        <TextBox x:Name="fileName" FontSize="15" HorizontalAlignment="Left" Height="42" Margin="66,361,0,0" TextWrapping="Wrap" Text="Input file name" VerticalAlignment="Top" Width="159" TextChanged="FileName_TextChanged"/>
+        <Button x:Name="saveButton" Content="Save" FontSize="20" HorizontalAlignment="Left" Margin="84,435,0,0" VerticalAlignment="Top" Width="100" Height="28" Click="SaveButton_Click"/>
         <TextBlock x:Name="edit" HorizontalAlignment="Left" Margin="305,362,0,0" TextWrapping="Wrap" Text="Edit text here" VerticalAlignment="Top" Height="41" Width="134" FontSize="20"/>
         <Button x:Name="selectFromFolders" FontSize="20" Content="Select" HorizontalAlignment="Left" Margin="95,309,0,0" VerticalAlignment="Top" Width="75" Click="Select_Click"/>
         <Button x:Name="selectFromFiles" FontSize="20" Content="Select" HorizontalAlignment="Left" Margin="337,309,0,0" VerticalAlignment="Top" Width="75" Click="SelectFromFiles_Click" />
+        <TextBox x:Name="input" HorizontalAlignment="Left" Height="239" Margin="305,435,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="134" TextChanged="RichTextBox_TextChanged"/>
 
     </Grid>
 </Window>

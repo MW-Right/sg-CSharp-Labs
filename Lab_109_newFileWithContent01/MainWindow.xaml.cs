@@ -77,6 +77,40 @@ namespace Lab_107_listFolders01
             SelectedFileList();
         }
 
+        private void FileListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void SelectFromFiles_Click(object sender, RoutedEventArgs e)
+        {
+            ProgramVariables.address += fileListBox.SelectedItem.ToString();
+        }
+
+        private void FileName_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (File.Exists(@ProgramVariables.address) == true)
+            {
+                input.Text = File.ReadAllText(@ProgramVariables.address);
+            }
+            else
+            {
+                File.Create($"{fileName.Text}.txt");
+                string[] textForFile = new string[] { input.Text };
+                File.WriteAllLines($"{fileName.Text}.txt", textForFile);
+            }
+        }
+
+        private void RichTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
         //private void SelectFromFiles_Click(object sender, RoutedEventArgs e)
         //{
         //    if (true)
@@ -113,3 +147,4 @@ namespace Lab_107_listFolders01
         }
     }
 }
+

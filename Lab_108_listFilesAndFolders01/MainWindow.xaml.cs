@@ -26,7 +26,7 @@ namespace Lab_107_listFolders01
     public partial class MainWindow : Window
     {
         public MainWindow()
-        { 
+        {
             InitializeComponent();
             LabsFolderList();
         }
@@ -84,7 +84,7 @@ namespace Lab_107_listFolders01
         //        FilePath.folderSelection = fileListBox.SelectedItem.ToString();
         //        ProgramVariables.address = $"C:\\labs/{FilePath.folderSelection}";
         //    }
-            
+
         //}
     }
     public class FilePath

@@ -45,15 +45,8 @@ namespace Lab_114_GUIEntity
         private void FullListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             cust = (Customer)fullListBox.SelectedItem;
-            try
-            {
-                nameTextBox.Text = cust.ContactName.ToString();
-                city.Text = cust.City;
-            }
-            catch
-            {
-                Trace.WriteLine("Null reference error");
-            }
+            nameTextBox.Text = cust.ContactName.ToString();
+            city.Text = cust.City;
             //Clears list box for update
             detailsListBox.ItemsSource = blank;
             ListBox2Content();
@@ -75,20 +68,13 @@ namespace Lab_114_GUIEntity
         }
         public void ListBox2Content()
         {
-            try
-            {
-                detailsListBox.ItemsSource = details;
-                details.Clear();
-                details.Add($"Title: {cust.ContactTitle}");
-                details.Add($"Name: {cust.ContactName}");
-                details.Add($"Customer ID: {cust.CustomerID}");
-                details.Add($"City: {cust.City}");
-                details.Add($"Region: {cust.Region}");
-            }
-            catch
-            {
-                Trace.WriteLine("Null reference error");
-            }
+            detailsListBox.ItemsSource = details;
+            details.Clear();
+            details.Add($"Title: {cust.ContactTitle}");
+            details.Add($"Name: {cust.ContactName}");
+            details.Add($"Customer ID: {cust.CustomerID}");
+            details.Add($"City: {cust.City}");
+            details.Add($"Region: {cust.Region}");
         }
 
         private void DetailsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
