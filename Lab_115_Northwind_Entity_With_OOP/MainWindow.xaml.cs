@@ -68,7 +68,7 @@ namespace Lab_115_Northwind_Entity_With_OOP
             {
                 makeActive.Content = "Make Inactive";
                 cust = (ActiveCustomer)Active.SelectedItem;
-                8cust.IsActive = false;
+                cust.IsActive = false;
                 active.Remove(cust);
                 inactive.Add(cust);
                 Refresh();

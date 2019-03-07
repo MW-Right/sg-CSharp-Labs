@@ -24,6 +24,7 @@ namespace Lab_116_TryCatchThrow
                 {
                     Console.WriteLine("Yeet");
                     Console.WriteLine(e.Message);
+                    throw;
                 }
                 catch
                 {

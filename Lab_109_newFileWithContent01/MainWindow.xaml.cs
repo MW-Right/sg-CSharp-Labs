@@ -96,12 +96,12 @@ namespace Lab_107_listFolders01
         {
             if (File.Exists(@ProgramVariables.address) == true)
             {
-                input.Text = File.ReadAllText(@ProgramVariables.address);
+                fileName.Text = File.ReadAllText(@ProgramVariables.address);
             }
             else
             {
                 File.Create($"{fileName.Text}.txt");
-                string[] textForFile = new string[] { input.Text };
+                string[] textForFile = new string[] { fileName.Text };
                 File.WriteAllLines($"{fileName.Text}.txt", textForFile);
             }
         }

@@ -29,7 +29,7 @@ namespace Lab_113_ArrayList
             int sum = 0;
             int[] myArray = { a, b, c, d };
             Queue<int> myQueue = new Queue<int>();
-            Stack<int> myStack = new Stack<int>();
+            Stack<int> myStack = new Stack<int>();           
             Dictionary<int, int> myDic = new Dictionary<int, int>();
             ArrayList myArrayList = new ArrayList();
             myQueue.Clear();
