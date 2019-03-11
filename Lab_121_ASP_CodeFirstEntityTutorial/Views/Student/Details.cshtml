@@ -1,0 +1,58 @@
+﻿@model Lab_121_ASP_CodeFirstEntityTutorial.Models.Student
+
+@{
+    ViewBag.Title = "Details";
+    var imagePath = "";
+    var Profile = Model.ID;
+
+    imagePath = $"../../wwwroot/{Profile}";
+    imagePath += ".jpg";
+}
+
+    <h2>Details</h2>
+
+<div>
+    <div class="col-lg-6">
+        <h4>Student</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.LastName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.LastName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.FirstMidName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.FirstMidName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.EnrollmentDate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.EnrollmentDate)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Course)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Course)
+            </dd>
+        </dl>
+    </div>
+    <div class="col-6">
+        <img src=@imagePath id="pp" />
+    </div>
+</div class="col-12">
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
